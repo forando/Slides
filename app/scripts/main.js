@@ -12,7 +12,8 @@ require.config({
         bootstrapScrollspy: '../bower_components/sass-bootstrap/js/scrollspy',
         bootstrapTab: '../bower_components/sass-bootstrap/js/tab',
         bootstrapTooltip: '../bower_components/sass-bootstrap/js/tooltip',
-        bootstrapTransition: '../bower_components/sass-bootstrap/js/transition'
+        bootstrapTransition: '../bower_components/sass-bootstrap/js/transition',
+        backbone: '../bower_components/backbone/backbone'
     },
     shim: {
         bootstrapAffix: {
@@ -50,6 +51,10 @@ require.config({
         },
         bootstrapTransition: {
             deps: ['jquery']
+        },
+        backbone: {
+            deps: ['../bower_components/underscore/underscore', 'jquery'],
+            exports: 'Backbone'
         }
     }
 });
