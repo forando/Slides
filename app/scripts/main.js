@@ -59,6 +59,6 @@ require.config({
     }
 });
 
-require([], function () {
-    'use strict';
+require(['views/app'], function (App) {
+    new App;
 });
