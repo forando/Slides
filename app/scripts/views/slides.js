@@ -4,13 +4,18 @@ define(['backbone', 'views/slide'], function(Backbone, SlideView){
         el: $('.slides'),
 
         initialize: function(){
-            this.renderAll();   
+            this.renderAll();
+            App.Vent.on('init', this.hideAllButFirst, this);
         },
 
         renderAll: function(){
             this.$el.empty();
             this.collection.each(this.render, this);
 
+        },
+
+        hideAllButFirst: function(){
+            this.$el.children(':nth-child(n+2)').hide();
         },
 
         render: function(slide){
