@@ -1,5 +1,5 @@
 window.slides = [
 	{title: 'My Presentation'},
-	{title: 'Hello, my name is Andrew'},
+	{image: 'http://placekitten.com/600/300'},
 	{title: 'I\'m a developer geek' }
 ];
